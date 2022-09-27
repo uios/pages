@@ -161,6 +161,10 @@
         display: flex;
         display: -webkit-flex;
     }
+
+    .display-none {
+        display: none;
+    }
 }
 
 /*FLEX*/
