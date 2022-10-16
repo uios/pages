@@ -72,9 +72,11 @@
     main {
         display: flex;
         display: webkit-flex;
-        /* height: 100%; */
+        width: 100%;
         overflow: visible;
         position: relative;
+        min-height: 100%;
+        background: #bbb;
     }
 
     ico {
@@ -130,107 +132,10 @@
 
     [placeholder]:not(input):empty:before {
         content: attr(placeholder);
+        opacity: 0.5;
     }
 
     [data-hide]:not([data-active="true"]), [data-page]:not([data-active="true"]):not(.-active), [data-pages]:not([data-active="true"]):not(.-active) {
         display: none;
-    }
-}
-
-/*BACKGROUND COLOR*/
-@media screen {
-    .background-color-000 {
-        background-color: #000;
-    }
-
-    .background-color-1d2327 {
-        background-color: #1d2327;
-    }
-}
-
-/*COLOR*/
-@media screen {
-    .color-fff {
-        color: #fff;
-    }
-}
-
-/*DISPLAY*/
-@media screen {
-    .display-flex {
-        display: flex;
-        display: -webkit-flex;
-    }
-
-    .display-none {
-        display: none;
-    }
-}
-
-/*FLEX*/
-@media screen {
-    .flex-36px-1-1 {
-        flex: 1;
-    }
-}
-
-/*FONT SIZE*/
-@media screen {
-    .font-size-14px {
-        font-size: 14px;
-    }
-}
-
-/*HEIGHT*/
-@media screen {
-    .height-36px, [data-height="36px"] {
-        height: 36px;
-    }
-
-    .height-100pct {
-        height: 100%;
-    }
-}
-
-/*HEIGHT*/
-@media screen {
-    .line-height-36px {
-        line-height: 36px;
-    }
-}
-
-/*MARGIN*/
-@media screen {
-    .margin-top-36px {
-        margin-top: 36px
-    }
-}
-
-/*POSITION*/
-@media screen {
-    .position-fixed {
-        position: fixed;
-    }
-}
-
-/*WIDTH*/
-@media screen {
-    .width-100pct {
-        width: 100%;
-    }
-    
-    .width-36px, [data-width="36px"] {
-        width: 36px;
-    }
-
-    .width-160px {
-        width: 160px;
-    }
-}
-
-/*Z-INDEX*/
-@media {
-    .z-index-5 {
-        z-index: 5;
     }
 }
