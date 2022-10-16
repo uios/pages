@@ -107,10 +107,22 @@
     }
 }
 
+
+/*FLEX GROW*/
+@media screen {
+    .flex-grow-1 {
+        flex-grow: 1;
+    }
+}
+
 /*FONT SIZE*/
 @media screen {
     .font-size-14px {
         font-size: 14px;
+    }
+    
+    .font-size-24px {
+        font-size: 24px;
     }
 }
 
@@ -148,6 +160,10 @@
     .justify-content-center {
         justify-content: center;
     }
+
+    .justify-content-space-between {
+        justify-content: space-between;
+    }
 }
 
 /*MARGIN*/
@@ -160,12 +176,24 @@
         margin-bottom: 20px;
     }
 
+    .margin-left-20px {
+        margin-left: 20px;
+    }
+
     .margin-top-20px {
         margin-top: 20px;
     }
 
     .margin-left-auto {
         margin-left: auto;
+    }
+
+    .margin-left-260px {
+        margin-left: 260px;
+    }
+
+    .margin-left-280px {
+        margin-left: 280px;
     }
     
     .margin-top-36px {
@@ -174,6 +202,10 @@
     
     .margin-top-auto {
         margin-top: auto;
+    }
+
+    .margin-top-70px {
+        margin-top: 70px;
     }
 }
 

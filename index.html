@@ -81,7 +81,7 @@
                                     <text>Media</text>
                                 </row>
                             </box>
-                            <box>
+                            <box data-href="/dashboard/:get/pages/">
                                 <row>
                                     <ico>
                                         <n class="gg-file-document"></n>
@@ -136,21 +136,21 @@
                             </box>
                             <box class="background-color-333 margin-top-20px">
                                 <row class="justify-content-center">
-                                    <text>Configure Server</text>
+                                    <text>Export Project</text>
                                 </row>
                             </box>
                         </column>
                     </card>
                 </column>
             </nav>
-            <page data-fetch="/cdn/html/page/page.dashboard.html" data-page="/dashboard/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.html" data-page="/dashboard/*/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.media.html" data-page="/dashboard/*/media/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.pages.html" data-page="/dashboard/*/pages/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.posts.html" data-page="/dashboard/*/posts/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.theme.html" data-page="/dashboard/*/theme/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.users.html" data-page="/dashboard/*/users/"></page>
-            <page data-fetch="/cdn/html/page/page.dashboard.blog.config.html" data-page="/dashboard/*/config/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.html" data-page="/dashboard/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.html" data-page="/dashboard/*/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.media.html" data-page="/dashboard/*/media/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.pages.html" data-page="/dashboard/*/pages/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.posts.html" data-page="/dashboard/*/posts/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.settings.html" data-page="/dashboard/*/settings/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.theme.html" data-page="/dashboard/*/theme/"></page>
+            <page class="flex-grow-1" data-fetch="/cdn/html/page/page.dashboard.blog.users.html" data-page="/dashboard/*/users/"></page>
         </main>
     </body>
 </html>
