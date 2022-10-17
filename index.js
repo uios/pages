@@ -18,7 +18,8 @@ window.cdn = {
 window.onload = ()=>{
     window.dom = {
         body: document.body,
-        boot: document.getElementById("boot")
+        boot: document.getElementById("boot"),
+        nav: document.body.find('nav')
     };
 
     window.global = window.globals;

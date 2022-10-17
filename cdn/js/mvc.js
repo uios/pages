@@ -23,9 +23,15 @@ window.mvc.v ? null : (window.mvc.v = view = function(route) {
 
         window.GET = window.GET ? GET : rout.ed.dir(dom.body.dataset.path);
 
+        controller.nav.close();
+
         if (root) {
 
             if (root === "dashboard") {
+                if (get.length > 1) {
+                    const title = get[1];
+                    dom.body.find('main > nav [placeholder]').textContent = title;
+                }
                 resolve(route);
             } else {
                 resolve(route);
@@ -57,7 +63,6 @@ window.mvc.c ? null : (window.mvc.c = controller = {
         open: ()=>{
 
             const nav = dom.body.find('body > nav');
-            console.log(nav.dataset);
             nav.dataset["960pxTransform"] = "0";
             nav.firstElementChild.classList.remove('display-none');
 
@@ -76,6 +81,39 @@ window.mvc.c ? null : (window.mvc.c = controller = {
             }
             );
         }
+
+    },
+
+    nav: {
+
+        close: ()=>{
+
+            const nav = document.body.find('body > main > nav');
+            const transform = nav.dataset["960pxTransform"];
+            const blocks = dom.body.find('main > pages');
+
+            nav.dataset["960pxTransform"] = "translateX(-100%)";
+            blocks.dataset["960pxTransform"] = "0";
+
+        }
+        ,
+
+        toggle: (target)=>{
+
+            const nav = document.body.find('body > main > nav');
+            const transform = nav.dataset["960pxTransform"];
+            const blocks = dom.body.find('main > pages');
+
+            if (transform === "translateX(-100%)") {
+                nav.dataset["960pxTransform"] = "translateX(0)";
+                blocks.dataset["960pxTransform"] = "translateX(280px)";
+            } else {
+                nav.dataset["960pxTransform"] = "translateX(-100%)";
+                blocks.dataset["960pxTransform"] = "0";
+            }
+
+        }
+        ,
 
     },
 

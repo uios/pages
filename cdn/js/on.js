@@ -543,6 +543,17 @@ window.on.key.up.card = {
 };
 
 window.on["submit"] = {
+    create: {
+        project: event => {
+            event.preventDefault();
+            const form = event.target;
+            const title = form.all('input')[0].value;
+            const shortname = form.all('input')[1].value;
+            if(title && shortname) {
+                ('/dashboard/' + shortname + '/').router();
+            }
+        }
+    },
     my: {
         login: async(event)=>{
             event.preventDefault();
@@ -559,55 +570,6 @@ window.on["submit"] = {
                 alert("Authentication Failed");
             }
             );
-        }
-    },
-
-    find: {
-        query: async(event)=>{
-            console.log(event);
-        }
-    },
-
-    post: {
-        tags: async(event)=>{
-            console.log(event);
-            event.type === "submit" ? event.preventDefault() : null;
-            const form = event.target.closest('form');
-            const search = form.find('#photo-tags-people');
-            const users = search.all('[data-uid]');
-            var uids = [];
-            var ppl = [];
-
-            if (users.length > 0) {
-                var u = 0;
-                var html = '';
-                do {
-                    var user = users[u];
-                    var span = document.createElement('span');
-                    ppl[u] = user.dataset.uid;
-                    uids[u] = {};
-                    uids[u].uid = user.dataset.uid;
-                    uids[u].username = user.find('[placeholder="username"]').textContent;
-                    u++;
-                } while (u < users.length);
-            }
-            byId('post-photo-metadata-people').dataset.json = JSON.stringify(uids);
-            byId('post-photo-metadata-people').dataset.people = JSON.stringify(ppl);
-            byId('post-photo-metadata-people').find('span > text').textContent = uids.length > 1 ? (uids.length + ' people') : (uids.length > 0 ? uids[0].username : "");
-            modal.exit(event.target);
-            console.log('on.submit.post.tags', {
-                users,
-                uids
-            });
-        }
-    },
-
-    search: {
-        query: async(event)=>{
-            event.preventDefault();
-            const keywords = new URLSearchParams(window.location.search).get('keywords');
-            //on.focus.out.search(byId('results-blur'));
-            ('/search/' + keywords + '/').router().then(byId('keywords').blur());
         }
     }
 };
