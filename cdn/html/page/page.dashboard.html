@@ -1,5 +1,5 @@
-<blocks class="padding-20px">
-    <header class="line-height-50px">
+<blocks class="flex-grow-1 padding-20px">
+    <header class="line-height-50px width-100pct">
         <row class="justify-content-space-between">
             <card class="margin-left-auto">
                 <row>
@@ -22,8 +22,8 @@
     </header>
     <block>
         <column>
-            <card class="background-color-fff border-radaius-50px display-none line-height-50px">
-                <form>
+            <form class="background-color-fff border-radius-50px line-height-30px margin-x-auto margin-y-20px width-480px">
+                <row>
                     <box>
                         <section>
                             <ico>
@@ -32,16 +32,21 @@
                         </section>
                     </box>
                     <input placeholder="Search..." type="text">
-                </form>
-            </card>
-            <card>
-                <row>
+                </row>
+            </form>
+            <card class="line-height-50px">
+                <column>
                     <box data-href="/dashboard/demo/">
                         <section>
                             <text>Demo</text>
                         </section>
                     </box>
-                </row>
+                    <box data-href="/dashboard/demo/">
+                        <section>
+                            <text>Demo</text>
+                        </section>
+                    </box>
+                </column>
             </card>
         </column>
     </block>
