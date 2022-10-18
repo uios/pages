@@ -131,6 +131,10 @@
     }
 
     @media (max-width: 480px) {
+        .-mobile-display-flex, [data-480px-display="flex"] {
+            display: flex;
+        }
+        
         .-mobile-display-none, [data-480px-display="none"] {
             display: none;
         }
@@ -232,6 +236,10 @@
 
     .margin-left-20px {
         margin-left: 20px;
+    }
+
+    .margin-right-20px {
+        margin-right: 20px;
     }
 
     .margin-top-20px {
