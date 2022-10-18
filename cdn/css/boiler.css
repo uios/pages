@@ -129,6 +129,12 @@
             display: flex;
         }
     }
+
+    @media (max-width: 480px) {
+        .-mobile-display-none, [data-480px-display="none"] {
+            display: none;
+        }
+    }
 }
 
 /*FLEX*/
@@ -280,6 +286,20 @@
     }
 }
 
+@media screen {
+    .max-width-100pct {
+        max-width: 100%;
+    }
+
+    .max-width-480px {
+        /* max-width: 480px; */
+    }
+
+    [data-max-width="calc(100% - 40px)"] {
+        max-width: calc(100% - 40px);
+    }
+}
+
 /*MIN HEIGHT*/
 @media screen {
     .min-height-100pct {
@@ -415,6 +435,10 @@
 
     .width-300px {
         width: 300px;
+    }
+
+    .width-480px {
+        width: 480px;
     }
 }
 
