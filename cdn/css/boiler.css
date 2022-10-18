@@ -300,7 +300,7 @@
     }
 
     .max-width-480px {
-        /* max-width: 480px; */
+        max-width: 480px;
     }
 
     [data-max-width="calc(100% - 40px)"] {
