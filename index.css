@@ -127,6 +127,16 @@
         position: relative;
     }
 
+    textarea {
+        -webkit-appearance: none;
+        border: unset;
+        resize: none;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
     body > page, body > pages {
         z-index: 123456789;
     }
