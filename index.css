@@ -1,3 +1,10 @@
+/*PSEUDO*/
+@media screen {   
+    body:not([data-uid]) .-isauth, body[data-uid] .-noauth {
+        display: none;
+    }
+}
+
 /*SHELL*/
 @media screen {
     html {
@@ -46,6 +53,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
+    }
+
+    box > * > picture {
+        display: flex;
+        display: -webkit-flex;
     }
 
     flex, column, row {

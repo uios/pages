@@ -27,6 +27,18 @@ String.prototype.router = async function(params) {
         }
     }
 
+    const fetching = dom.body.all('[data-fetch][data-root="' + getRoot() + '"]');
+    if (fetching.length > 0) {
+        var f = 0;
+        do {
+            console.log(fetching[f]);
+            if(fetching[f].innerHTML === "") {
+                fetching[f].innerHTML = await ajax(fetching[f].dataset.fetch);                
+            } 
+            f++;
+        } while (fetching.length < 0);
+    }
+
     var go = async function(resolve, reject) {
         //console.log('String.prototype.router', route);
         if (route) {
@@ -124,7 +136,7 @@ window.rout.ed.bang = async(route)=>{
 
     if (vp && vp.closest('main')) {
         $('pages[data-pages]').removeAttr("data-active");
-        $('page[data-page]').removeAttr("data-active");   
+        $('page[data-page]').removeAttr("data-active");
     } else {
         $('body > page[data-page]').removeAttr("data-active");
         $('body > pages[data-pages]').removeAttr("data-active");
@@ -135,9 +147,9 @@ window.rout.ed.bang = async(route)=>{
     $('[data-hide="' + route.page + '"]').attr("data-active", false);
     $('[data-page="' + route.page + '"]').attr("data-active", true);
     $('[data-path="' + route.path + '"]').attr("data-active", true);
-    
-    $('page[data-page="' + route.page + '"]').attr("data-uri", route.path); 
-    
+
+    $('page[data-page="' + route.page + '"]').attr("data-uri", route.path);
+
     //dom.body.find('[data-page="' + route.page + '"]').setAttribute("data-active", true);
 
     var rs = $('[data-pages]');

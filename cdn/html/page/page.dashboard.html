@@ -22,7 +22,7 @@
     </header>
     <block>
         <column>
-            <form class="background-color-fff border-radius-50px line-height-30px margin-x-auto margin-y-20px width-480px">
+            <form class="background-color-fff border-radius-50px flex-grow-1 line-height-30px margin-x-auto margin-y-20px max-width-768px width-100pct">
                 <row>
                     <box>
                         <section>
@@ -34,17 +34,15 @@
                     <input placeholder="Search..." type="text">
                 </row>
             </form>
-            <card class="line-height-50px">
+            <card class="line-height-50px margin-auto max-width-768px width-100pct">
                 <column>
-                    <box data-href="/dashboard/demo/">
-                        <section>
-                            <text>Demo</text>
-                        </section>
-                    </box>
-                    <box data-href="/dashboard/demo/">
-                        <section>
-                            <text>Demo</text>
-                        </section>
+                    <box class="background-color-fff margin-bottom-1px" data-href="/dashboard/demo/">
+                        <row>
+                            <ico>
+                                <n class="gg-search"></n>
+                            </ico>
+                            <text class="font-weight-bolder">Demo</text>
+                        </row>
                     </box>
                 </column>
             </card>

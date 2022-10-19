@@ -18,6 +18,10 @@
         background-color: #333;
     }
     
+    .background-color-bbb {
+        background-color: #bbb;
+    }
+    
     .background-color-fff {
         background-color: #fff;
     }
@@ -100,6 +104,10 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    [data-columns="3"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     [data-columns="2"] {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -115,6 +123,12 @@
             grid-template-columns: repeat(1, 1fr);
         }
     }
+
+    @media (max-width: 640px) {
+        [data-vga-columns="1"] {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 }
 
 /*DISPLAY*/
@@ -122,6 +136,11 @@
     .display-flex {
         display: flex;
         display: -webkit-flex;
+    }
+
+    .display-inline-flex {
+        display: inline-flex;
+        display: -webkit-inline-flex;
     }
 
     .display-none {
@@ -187,8 +206,23 @@
     }
 }
 
+/*GRID GAP*/
+@media screen {
+    .grid-gap-10px {
+        grid-gap: 10px;
+    }
+    
+    .grid-gap-20px {
+        grid-gap: 20px;
+    }
+}
+
 /*HEIGHT*/
 @media screen {
+    .height-0 {
+        height: 0;
+    }
+    
     .height-36px, [data-height="36px"] {
         height: 36px;
     }
@@ -226,8 +260,16 @@
         margin: auto;
     }
 
+    .margin-10px {
+        margin: 10px;
+    }
+
     .margin-20px {
         margin: 20px;
+    }
+
+    .margin-bottom-1px {
+        margin-bottom: 1px;
     }
     
     .margin-bottom-10px {
@@ -236,6 +278,10 @@
     
     .margin-bottom-20px {
         margin-bottom: 20px;
+    }
+
+    .margin-left-10px {
+        margin-left: 10px;
     }
 
     .margin-left-20px {
@@ -286,6 +332,11 @@
         margin: 0 auto;
     }
 
+    .margin-x-10px {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .margin-y-20px {
         margin-bottom: 20px;
         margin-top: 20px;
@@ -309,6 +360,10 @@
 
     .max-width-480px {
         max-width: 480px;
+    }
+
+    .max-width-768px {
+        max-width: 768px;
     }
 
     [data-max-width="calc(100% - 40px)"] {
@@ -348,8 +403,17 @@
         padding: 20px;
     }
 
+    .padding-top-56pt25pct {
+        padding-top: 56.25%;
+    }
+
     .padding-top-100pct {
-        /* padding-top: 100%; */
+        padding-top: 100%;
+    }
+    
+    .padding-x-10px {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     .padding-x-20px {
@@ -455,6 +519,10 @@
 
     .width-480px {
         width: 480px;
+    }
+
+    .width-768px {
+        width: 768px;
     }
 }
 
