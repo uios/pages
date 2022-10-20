@@ -1,96 +1,24 @@
-<blocks>
-    <header>
-        <row class="justify-content-space-between">
-            <card>
-                <row>
-                    <box class="display-none" data-960px-display="flex" data-tap="controller.nav.toggle(event.target)">
-                        <section>
-                            <ico>
-                                <n class="gg-menu"></n>
-                            </ico>
-                        </section>
+<blocks class="min-height-100vh" data-backdrop-blur="10px">
+    <block class="height-100pct justify-content-center">
+        <picture data-backdrop-filter="blur(10px)" data-background-color="rgba(255,255,255,0.5)" data-href="/dashboard/:get/pages/"></picture>
+        <column class="padding-y-50px" data-max-height="calc(100% - 120px)">
+            <form class="background-color-fff border-radius-10px margin-auto overflow-hidden max-width-480px width-100pct">
+                <picture></picture>
+                <column id="my-login" onsubmit="controller.sign.in(event)">
+                    <box class="margin-20px">
+                        <column>
+                            <text class="line-height-50px">Provide a name for your new page.</text>
+                            <input class="border-1px-solid border-color-bbb line-height-50px padding-x-10px" placeholder="Page Name" type="text">
+                        </column>
                     </box>
-                    <box class="line-height-50px">
-                        <section>
-                            <text class="font-size-24px font-weight-bolder">Page</text>
-                        </section>
+                    <box class="border-color-bbb border-top-1px-solid line-height-50px padding-top-50pct width-100pct">
+                        <row data-columns="2">
+                            <text class="background-color-333 color-fff text-align-center" data-submit="form-createR">Create</text>
+                            <text class="text-align-center" data-href="/dashboard/:get/pages/">Cancel</text>
+                        </row>
                     </box>
-                </row>
-            </card>
-            <card>
-                <row>
-                    <box class="background-color-333 color-fff line-height-50px padding-x-20px">
-                        <section>
-                            <text class="font-size-14px font-weight-bolder">Save Post</text>
-                        </section>
-                    </box>
-                </row>
-            </card>
-        </row>
-    </header>
-    <form class="margin-y-20px wdth-100pct">
-        <column>
-            <header>
-                <column>
-                    <input class="background-color-fff font-size-18px line-height-50px margin-bottom-20px padding-x-20px" placeholder="Enter Title Here" type="text">
                 </column>
-            </header>
-            <card class="background-color-fff">
-                <header class="background-color-f0 display-flex flex-direction-row justify-content-space-between">
-                    <row class="display-none">
-                        <ico>
-                            <n class="gg-format-bold"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-format-italic"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-format-underline"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-format-text"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-format-left"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-format-center"></n>
-                        </ico>
-                        <ico>
-                            <n class="--ggs-1pt5 gg-layout-list"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-link"></n>
-                        </ico>
-                    </row>
-                    <row>
-                        <ico>
-                            <img class="width-18px" src="cdn/svg/more-text.svg">
-                        </ico>
-                        <ico>
-                            <img class="width-18px" src="cdn/svg/more-paragraph.svg">
-                        </ico>
-                        <ico>
-                            <img class="width-18px" src="cdn/svg/more-rich.svg">
-                        </ico>
-                    </row>
-                    <row>
-                        <ico>
-                            <n class="gg-undo"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-redo"></n>
-                        </ico>
-                        <ico>
-                            <n class="gg-more-vertical-alt"></n>
-                        </ico>
-                    </row>
-                </header>
-                <column>
-                    <textarea class="min-height-360px padding-20px width-100pct"></textarea>
-                </column>
-                <footer></footer>
-            </card>
+            </form>
         </column>
-    </form>
+    </block>
 </blocks>

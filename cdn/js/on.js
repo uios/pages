@@ -554,6 +554,17 @@ window.on["submit"] = {
             }
         }
     },
+    dashboard: {
+        files: (event) => {
+            event.preventDefault();
+        },
+        page: (event) => {
+            event.preventDefault();           
+        },
+        project: (event) => {
+            event.preventDefault();         
+        }
+    },
     my: {
         login: async(event)=>{
             event.preventDefault();
@@ -571,5 +582,5 @@ window.on["submit"] = {
             }
             );
         }
-    }
+    }    
 };
