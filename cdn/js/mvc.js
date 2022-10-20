@@ -70,20 +70,6 @@ window.mvc.c ? null : (window.mvc.c = controller = {
 
     },
 
-    my: {
-
-        login: (event,f)=>{
-            event.preventDefault();
-            auth.account.login(event).then(e=>(f ? f : '/').router()).catch(e=>{
-                var code = e.code;
-                var message = e.message;
-                alert(message);
-            }
-            );
-        }
-
-    },
-
     nav: {
 
         close: ()=>{
@@ -117,99 +103,16 @@ window.mvc.c ? null : (window.mvc.c = controller = {
 
     },
 
-    plans: {
+    sign: {
 
-        compare: (target)=>{
-
-            var cycle = target.closest('[data-before]').dataset.before;
-
-            if (cycle) {
-                const blocks = target.closest('blocks');
-                const block = blocks.children[2];
-                const card = target.closest('card');
-                if (cycle === "monthly") {
-                    card.firstElementChild.dataset.transform = "translateX(0)";
-                    $(block.all('card text span:nth-child(2)')).attr('data-display', 'none');
-                    $(block.all('card text span:nth-child(1)')).attr('data-display', 'flex');
-                } else if (cycle === "yearly") {
-                    card.firstElementChild.dataset.transform = "translateX(100%)";
-                    $(block.all('card text span:nth-child(1)')).attr('data-display', 'none');
-                    $(block.all('card text span:nth-child(2)')).attr('data-display', 'flex');
-                }
-                card.find('[data-color]').removeAttribute('data-color');
-                target.dataset.color = "#fff";
+        in: (event,f)=>{
+            event.preventDefault();
+            auth.account.login(event).then(e=>(f ? f : '/').router()).catch(e=>{
+                var code = e.code;
+                var message = e.message;
+                alert(message);
             }
-
-        }
-        ,
-
-        period: (target)=>{
-
-            var cycle = target.closest('[data-before]');
-            if (cycle) {
-                const card = target.closest('card');
-                const section = target.closest('header').nextElementSibling;
-                if (cycle.dataset.before === "monthly") {
-                    card.firstElementChild.dataset.transform = "translateX(0)";
-                    $(section.all('box > :last-child > :nth-child(1)')).removeClass('display-none');
-                    $(section.all('box > :last-child > :nth-child(2)')).addClass('display-none');
-                }
-                if (cycle.dataset.before === "yearly") {
-                    card.firstElementChild.dataset.transform = "translateX(100%)";
-                    $(section.all('box > :last-child > :nth-child(1)')).addClass('display-none');
-                    $(section.all('box > :last-child > :nth-child(2)')).removeClass('display-none');
-                }
-                card.find('[data-color]').removeAttribute('data-color');
-                target.dataset.color = "#fff";
-            }
-
-        }
-        ,
-
-        select: (target)=>{
-            const index = target.closest('box').index();
-            const plan = target.closest('block').find('block > section').all('box')[index];
-            const type = plan.find('text b').textContent;
-        }
-        ,
-
-        view: (target)=>{
-
-            const index = target.closest('box').index();
-
-            const plan = target.closest('block').find('block > section').all('box')[index];
-            if (plan) {
-                const row = plan.parentNode;
-
-                const plans = $(row.all('box'));
-                plans.attr("data-height", "120px");
-                plans.attr("data-width", "120px");
-                $(plan.parentNode.all('box > picture + column')).addClass("display-none");
-                const type = plan.find('text b').textContent;
-
-                $(plan.all('picture + column')).removeClass("display-none");
-                plan.dataset.height = "240px";
-                plan.dataset.width = "240px";
-
-                const index = plan.index();
-                row.dataset.tabletTransform = "translateX(calc((-100%/3)*" + index + "))";
-
-                const backgroundColor = plan.firstElementChild.dataset.backgroundColor;
-                row.closest('block').find('header').children[1].firstElementChild.dataset.backgroundColor = backgroundColor;
-                row.closest('block').firstElementChild.dataset.backgroundColor = backgroundColor;
-
-                const footer = row.closest('block').find('footer');
-                if (footer) {
-                    const bullets = $(footer.all('box'));
-                    const bullet = bullets[index];
-                    const button = bullet.find('flex');
-                    $(footer.all('box flex')).addClass('display-none');
-                    $(footer.all('box')).attr('data-width', '50px');
-                    button.classList.remove('display-none');
-                    button.closest('box').dataset.width = "120px";
-                }
-            }
-
+            );
         }
 
     }
