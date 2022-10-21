@@ -462,3 +462,9 @@ function getPages(win) {
     }
     return root;
 }
+
+window.notify = {
+    alert: message => {
+        alert(message);
+    }
+}

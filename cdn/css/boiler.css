@@ -103,6 +103,13 @@
     }
 }
 
+/*BOTTOM*/
+@media screen {
+    .bottom-0 {
+        bottom: 0;
+    }
+}
+
 /*BOX SHADOW*/
 @media screen {
     .box-shadow-0-1px-6px-0, [data-box-shadow="0 1px 6px 0"] {
@@ -196,6 +203,12 @@
         .-mobile-display-none, [data-480px-display="none"] {
             display: none;
         }
+    }
+}
+
+@media screen {
+    .left-0 {
+        left: 0;
     }
 }
 
@@ -444,6 +457,12 @@
 
     [data-min-height="calc(100vh - 240px)"] {
         min-height: calc(100vh - 240px);
+    }
+}
+
+@media {
+    .opacity-50pct {
+        opacity: 50%;
     }
 }
 
