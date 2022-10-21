@@ -52,6 +52,48 @@ window.mvc.v ? null : (window.mvc.v = view = function(route) {
                             $(vp.all('blocks > header box flex')[1]).attr("data-width", "50px");
                             $(vp.all('block[data-step]')).addClass('display-none');
                             $(vp.all('block[data-step]')[1]).removeClass('display-none');
+
+                            var sel = "iro-setup-about-brand";
+                            if (byId(sel).innerHTML === "") {
+                                var width = byId(sel).clientWidth - 51;
+                                var picker = new iro.ColorPicker("#" + sel,{
+                                    width,
+                                    color: "#f00",
+                                    layout: [{
+                                        component: iro.ui.Box
+                                    }, {
+                                        component: iro.ui.Slider,
+                                        options: {
+                                            sliderType: "hue"
+                                        }
+                                    }],
+                                    layoutDirection: "horizontal",
+                                    margin: 20,
+                                    sliderSize: 30
+                                });
+                                picker.on("color:change", function(color) {
+                                    var icon = byId("build-app-icon");
+                                    var hexString = color.hexString;
+                                    var rgb = color.rgb;
+                                    var rgbString = rgb.r + "," + rgb.g + "," + rgb.b;
+                                    var hsl = color.hsl;
+                                    var hslString = hsl.h + "," + hsl.s + "%," + hsl.l + "%";
+                                    byId("color-data-hex").all('text')[1].textContent = hexString;
+                                    byId("color-data-rgb").all('text')[1].textContent = rgbString;
+                                    byId("color-data-hsl").all('text')[1].textContent = hslString;
+                                    //icon.style.backgroundColor = hexString;
+                                    //icon.style.color = colors.contrast(hexString);
+                                    //icon.dataset.contrast = icon.style.color;
+                                });
+                                picker.on("mount", function(e) {
+                                    console.log(e);
+                                    const base = e.base;
+                                    base.classList = "height-100pct IroColorPicker position-absolute top-0 width-100pct";
+                                    picker.resize(dom.body.clientWidth > 480 ? 390 : dom.body.clientWidth - 90);
+                                });
+                                window.addEventListener("resize", ()=>byId("color-picker").clientWidth > 0 ? picker.resize(byId("color-picker").clientWidth - 90) : null);
+                            }
+
                         }
                     } else {
                         $(vp.all('blocks > header box flex')[0]).attr("data-height", "50px");

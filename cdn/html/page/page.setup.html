@@ -45,7 +45,7 @@
                     </box>
                 </column>
             </section>
-            <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
+            <footer class="bottom-0 left-0 line-height-50px margin-auto max-width-480px position-fixed right-0 width-100pct">
                 <row class="justify-content-space-between">
                     <box class="padding-x-10px" data-href="/dashboard/">
                         <row>
@@ -74,18 +74,20 @@
             </section>
         </header>
         <!--data-after="Sync your application across multiple workspaces. Keep your data both offline or in the cloud."-->
-        <section class="section-step-two logo-maker">
+        <section class="section-step-two logo-maker max-width-480px width-100pct">
             <card class="preview-logo" id="preview-logo" data-after="App Title">
-                <div class="icon" data-char="A" id="build-app-icon"></div>
-                <section class="color-selected" data-evt="null" data-file="build-app-logo" data-html="build-app-icon">
-                    <box data-evt="file" data-id="build-app-logo">
+                <row class="color-selected" data-evt="null" data-file="build-app-logo" data-html="build-app-icon">
+                    <ico data-box-shadow="0 1px 6px rgb(32 33 36 / 28%)">
+                        <n placeholder="?"></n>
+                    </ico>
+                    <box data-box-shadow="0 1px 6px rgb(32 33 36 / 28%)" data-evt="file" data-id="build-app-logo">
                         <input type="file" id="build-app-logo" onchange="on.change.setup.logo(event)">
                     </box>
-                </section>
+                </row>
             </card>
             <card class="padding-20px" data-evt="color" id="color-picker">
-                <section class="build-brand-color iro-color-picker" id="iro-build-er-_-about"></section>
-                <row class="justify-content-space-between">
+                <section class="position-relative width-100pct" data-padding-top="calc(100% - 50px)" id="iro-setup-about-brand"></section>
+                <row class="justify-content-space-between margin-top-10px">
                     <box class="code" data-before="HEX" id="color-data-hex">
                         <column>
                             <text class="color-bbb font-weight-bolder">HEX</text>
@@ -107,7 +109,7 @@
                 </row>
             </card>
         </section>
-        <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
+        <footer class="bottom-0 left-0 line-height-50px margin-auto max-width-480px position-fixed right-0 width-100pct">
             <row class="justify-content-space-between">
                 <box class="padding-x-10px" data-href="/setup/:get/">
                     <row>
@@ -194,7 +196,7 @@
                 </section>
             </card>
         </section>
-        <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
+        <footer class="bottom-0 left-0 line-height-50px margin-auto max-width-480px position-fixed right-0 width-100pct">
             <row class="justify-content-space-between">
                 <box class="padding-x-10px" data-href="/setup/:get/:get/">
                     <row>
