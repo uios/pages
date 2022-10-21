@@ -127,6 +127,10 @@
 
 /*COLOR*/
 @media screen {
+    .color-bbb {
+        color: #bbb;
+    }
+    
     .color-fff {
         color: #fff;
     }

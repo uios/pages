@@ -47,7 +47,7 @@
             </section>
             <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
                 <row class="justify-content-space-between">
-                    <box class="padding-x-10px" data-href="/build/er/">
+                    <box class="padding-x-10px" data-href="/dashboard/">
                         <row>
                             <ico data-width="25px">
                                 <n class="gg-chevron-left"></n>
@@ -68,31 +68,48 @@
         </column>
     </block>
     <block class="align-items-center display-none justify-content-center margin-x-auto overflow-x-hidden margin-top-120px" data-min-height="calc(100vh - 240px)" data-step="two">
-        <header class="header-step header-step-two">
-            <div data-before="Create an image for your platform."></div>
+        <header class="padding-20px text-align-center">
+            <section>
+                <text class="font-weight-bolder">Create an image for your platform.</text>
+            </section>
         </header>
         <!--data-after="Sync your application across multiple workspaces. Keep your data both offline or in the cloud."-->
         <section class="section-step-two logo-maker">
-            <header class="preview-logo" id="preview-logo" data-after="App Title">
+            <card class="preview-logo" id="preview-logo" data-after="App Title">
                 <div class="icon" data-char="A" id="build-app-icon"></div>
-                <footer class="color-selected" data-evt="null" data-file="build-app-logo" data-html="build-app-icon">
-                    <div data-evt="file" data-id="build-app-logo">
+                <section class="color-selected" data-evt="null" data-file="build-app-logo" data-html="build-app-icon">
+                    <box data-evt="file" data-id="build-app-logo">
                         <input type="file" id="build-app-logo" onchange="on.change.setup.logo(event)">
-                    </div>
-                </footer>
-            </header>
-            <section class="color-picker" data-evt="color" id="color-picker">
-                <div class="build-brand-color iro-color-picker" id="iro-build-er-_-about"></div>
-                <footer class="color-data">
-                    <div class="code" data-before="HEX" id="color-data-hex">#000000</div>
-                    <div class="code" data-before="RGB" id="color-data-rgb">0, 0, 0</div>
-                    <div class="code" data-before="HSL" id="color-data-hsl">0, 0%, 0%</div>
-                </footer>
-            </section>
+                    </box>
+                </section>
+            </card>
+            <card class="padding-20px" data-evt="color" id="color-picker">
+                <section class="build-brand-color iro-color-picker" id="iro-build-er-_-about"></section>
+                <row class="justify-content-space-between">
+                    <box class="code" data-before="HEX" id="color-data-hex">
+                        <column>
+                            <text class="color-bbb font-weight-bolder">HEX</text>
+                            <text>#000000</text>
+                        </column>
+                    </box>
+                    <box class="code" data-before="RGB" id="color-data-rgb">
+                        <column>
+                            <text class="color-bbb font-weight-bolder">RGB</text>
+                            <text>0, 0, 0</text>
+                        </column>
+                    </box>
+                    <box class="code" data-before="HSL" id="color-data-hsl">
+                        <column>
+                            <text class="color-bbb font-weight-bolder">HSL</text>
+                            <text>0, 0%, 0%</text>
+                        </column>
+                    </box>
+                </row>
+            </card>
         </section>
         <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
             <row class="justify-content-space-between">
-                <box class="padding-x-10px" data-goto="one">
+                <box class="padding-x-10px" data-href="/setup/:get/">
                     <row>
                         <ico data-width="25px">
                             <n class="gg-chevron-left"></n>
@@ -179,7 +196,7 @@
         </section>
         <footer class="bottom-0 left-0 line-height-50px max-width-480px position-fixed width-100pct">
             <row class="justify-content-space-between">
-                <box class="padding-x-10px" data-goto="two">
+                <box class="padding-x-10px" data-href="/setup/:get/:get/">
                     <row>
                         <ico data-width="25px">
                             <n class="gg-chevron-left"></n>

@@ -428,6 +428,17 @@ window.on.touch = {
             if (dataset.goto) {
                 $(event.target.closest('blocks').all('block[data-step]')).addClass('display-none');
                 $(event.target.closest('blocks').all('block[data-step="' + dataset.goto + '"]')).removeClass('display-none');
+                var link = "";
+                if(dataset.goto === "two") {
+                    const color = 1>0 ? "fff" : "000";
+                    const domain = event.target.closest('block').find('input').value;
+                    link = "/setup/" + domain + '/' + color + "/";
+                    link.router();
+                }
+                if(dataset.goto === "three") {
+                    link = "/setup/:get/:get/_/";
+                    link.router();
+                }
             }
         }
     }
