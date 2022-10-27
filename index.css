@@ -65,6 +65,10 @@
         display: webkit-flex;
     }
 
+    bar {
+        display: block;
+    }
+
     column {
         flex-direction: column;
     }
